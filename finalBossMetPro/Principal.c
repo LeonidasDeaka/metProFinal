@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include"RegLibro.c"
 #include "Factura.c"
 
 

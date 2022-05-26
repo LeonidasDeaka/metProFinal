@@ -29,9 +29,9 @@ void LlenarDatosFact(){
         printf("Producto: ");
         scanf(" %[^\n]", fac.detalle[i].libro);
         printf("Precio: ");
-        scanf("%f", fac.detalle[i].precio);
+        scanf("%f", &fac.detalle[i].precio);
         printf("Cantidad: ");
-        scanf("%i", fac.detalle[i].cant);
+        scanf("%i", &fac.detalle[i].cant);
         i++;
         printf("Desea registrar otro producto? 1.Si o 2.No ");
         scanf("%i", &op);
@@ -53,20 +53,20 @@ void LlenarDatosFact(){
 
 void mostrarFactura(Factura fac, int filas){
     printf("ID %i \n", fac.id);
-    printf("Fecha  %s", fac.fecha);
-    printf("Cliente %s", fac.cliente);
+    printf("Fecha  %s\n", fac.fecha);
+    printf("Cliente %s\n", fac.cliente);
     printf("-----------------------------------------------------\n");
     float subTotal = 0;
     for (int i = 0; i < filas; i++)
     {
         float total = calcularTotal(fac.detalle[i].precio, fac.detalle[i].cant);
         subTotal += total;
-        printf("%s\t %f\t %i\t %f", fac.detalle[i].libro, fac.detalle[i].precio, fac.detalle[i].cant, total);
+        printf("%s\t %.2f\t %i\t %.2f \n", fac.detalle[i].libro, fac.detalle[i].precio, fac.detalle[i].cant, total);
     }
     float iva = calcularIva(subTotal);
     float monto = calcularMonto(subTotal, iva);
     printf("Sub Total: %.2f\n", subTotal);
     printf("IVA: %.2f\n", iva);
-    printf("Monto: %.2f", monto);
+    printf("Monto: %.2f\n", monto);
 }
 
