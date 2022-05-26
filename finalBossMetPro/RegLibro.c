@@ -11,7 +11,8 @@ int Menu()
     switch (op)
     {
     case 0:
-        printf("Adios...n");
+        printf("Adios...\n");
+        break;
     case 1:
         /* code */
         guardarLibro();

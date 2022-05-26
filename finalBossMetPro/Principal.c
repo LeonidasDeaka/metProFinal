@@ -1,16 +1,13 @@
 #include<stdio.h>
 #include"RegLibro.c"
+#include "Factura.c"
 
-int Menu();
+
+void LlenarDatosFact();
 
 int main(int argc, char const *argv[])
 {
-	int opcion;
-	do
-	{	
-		opcion = Menu();
-	} while (opcion!=0);
-	
+	LlenarDatosFact();
 	return 0;
 }
 
