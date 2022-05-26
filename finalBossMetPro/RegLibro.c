@@ -21,6 +21,7 @@ int Menu()
     default:
         break;
     }
+    return op;
 }
 
 int guardarLibro()
